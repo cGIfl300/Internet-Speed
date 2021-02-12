@@ -15,7 +15,7 @@ def main():
         shell_stdout = call_internet_website()
         try:
             json_converted = json.loads(shell_stdout)
-        except:
+        except ValueError:
             json_converted = json.loads("{\"ping\": 999999, \"download\": 0, \"upload\": 0}")
 
         ping = int(json_converted['ping'])
