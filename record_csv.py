@@ -1,4 +1,4 @@
-# Copyright(C] 2021 cGIfl300 <cgifl300@gmail.com>
+# Copyright(C) 2021 cGIfl300 <cgifl300@gmail.com>
 
 from datetime import datetime
 

@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 #
-# Copyright(C] 2021 cGIfl300 <cgifl300@gmail.com>
+# Copyright(C) 2021 cGIfl300 <cgifl300@gmail.com>
 
 import json
 from time import sleep
@@ -16,19 +16,22 @@ def main():
         try:
             json_converted = json.loads(shell_stdout)
         except ValueError:
-            json_converted = json.loads("{\"ping\": 999999, \"download\": 0, \"upload\": 0}")
+            json_converted = json.loads('{"ping": 999999, "download": 0, "upload": 0}')
 
-        ping = int(json_converted['ping'])
-        download = int(json_converted['download'] / 1_000_000)
-        upload = int(json_converted['upload'] / 1_000_000)
+        ping = int(json_converted["ping"])
+        download = int(json_converted["download"] / 1_000_000)
+        upload = int(json_converted["upload"] / 1_000_000)
 
         print(
-            f"Votre ping est de {ping} ms, votre upload est de {upload} mbps et votre download est de {download} mbps.")
+            f"Votre ping est de {ping} ms, votre upload est de {upload} mbps et votre download est de {download} mbps."
+        )
 
         record_csv(ping, upload, download)
 
         sleep(1_800)
 
+def aurevoir_fonction():
+    pass
 
-if __name__ == '__main__':
+if __name__ == "__main__":
     main()
