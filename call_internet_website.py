@@ -10,7 +10,8 @@ def call_internet_website():
     """
     path_to_python = executable
     shell_stdout = run(
-        f"{path_to_python} speedtest.py --json", shell=True, capture_output=True
+        f"{path_to_python} speedtest.py --json", shell=True,
+        capture_output=True
     )
     shell_stdout = shell_stdout.stdout.decode()
     return shell_stdout
